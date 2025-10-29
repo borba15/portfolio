@@ -10,9 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
       hero_btn: "Contate-Me",
       hero_trabalhando: "Trabalhando em",
       nav_inicio: "início",
-      nav_skills: "skills",
+      nav_skills: "habilidades",
       nav_sobre: "sobre mim",
       nav_contato: "contato",
+      skills_titulo: "habilidades",
       sobre_titulo: "sobre mim",
       sobre_1:
         "Atualmente, estou no segundo semestre da graduação e sigo firme no caminho para me tornar um desenvolvedor back-end.",
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_skills: "skills",
       nav_sobre: "about me",
       nav_contato: "contact",
+      skills_titulo: "skills",
       sobre_titulo: "about me",
       sobre_1:
         "I am currently in the second semester of my degree and working towards becoming a back-end developer.",
@@ -73,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (heroBtn) heroBtn.textContent = t.hero_btn;
     const heroStatus = document.querySelector(".status-text-l");
     if (heroStatus) heroStatus.textContent = t.hero_trabalhando;
+
     // Navbar
     const navLinks = document.querySelectorAll("#nav-right a");
     if (navLinks.length >= 4) {
@@ -81,6 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks[2].innerHTML = `<span class="hashtag">#</span>${t.nav_sobre}`;
       navLinks[3].innerHTML = `<span class="hashtag">#</span>${t.nav_contato}`;
     }
+
+    // Skills
+    const skillsTitle = document.querySelector(".skills-title div")
+    if (skillsTitle) skillsTitle.textContent = t.skills_titulo;
 
     // Footer
     const footerLinks = document.querySelectorAll(".footer-refs a");

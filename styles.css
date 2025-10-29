@@ -8,8 +8,8 @@
 
 /* alignment-test
 .hero-text, #nav-left, .skills-title, .about-title, .contact-title {border-left: 1px solid red;}
-#contato {border-right: 1px solid red;} 
-*/
+#contato {border-right: 1px solid red;}  */
+
 
 html, body {
   overflow-x: hidden;
