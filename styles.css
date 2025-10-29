@@ -243,8 +243,97 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     margin-top: 2.5rem;
 }
 
+.language-switcher {
+  position: relative;
+}
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+}
+
+.custom-dropdown .selected {
+  border: 1px solid var(--primary-color);
+  background: none;
+  color: inherit;
+  font: inherit;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-dropdown .selected:hover {
+  border-color: var(--secundary-color);
+  color: var(--secundary-color);
+}
+
+.custom-dropdown.active .selected {
+  border-color: var(--secundary-color);
+}
+
+.custom-dropdown .options {
+  position: absolute;
+  top: 85px;
+  left: 65px;
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  display: none;
+  min-width: 130px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.custom-dropdown .options li {
+  padding: 8px 12px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.25s ease, background 0.25s ease;
+  position: relative;
+}
+
+.custom-dropdown .options li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--primary-color), var(--secundary-color));
+  transition: width 0.3s ease;
+}
+
+.custom-dropdown .options li:hover::after {
+  width: 100%;
+}
+
+.custom-dropdown .options li:hover {
+  color: #fff;
+}
+
+.custom-dropdown.active .options {
+  display: block;
+}
+
 #nav-left > h1 {
     font-size: 15px;
+}
+
+#nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 #nav-right > a {
@@ -274,13 +363,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 
 .hover-underline::after {
   bottom: 0;
-  transform-origin: left; /* cresce da direita para a esquerda */
+  transform-origin: left;
   background: linear-gradient(to left, var(--primary-color), var(--secundary-color));
 }
 
 .hover-underline::before {
   top: 0;
-  transform-origin: right; /* cresce da esquerda para a direita */
+  transform-origin: right;
   background: linear-gradient(to right, var(--primary-color), var(--secundary-color));
 }
 
@@ -300,7 +389,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 
 .hero-text {
     margin-left: -261px;
+    margin-right: 6rem;
+}
 
+.hero-text > h1 {
+    font-size: 35px;
 }
 
 .hero-image-container {
@@ -509,10 +602,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 .footer-refs > a {
     position: relative;
     display: inline-block;
-    margin: 0 1rem 1rem 0; /* espaçamento entre os links */
+    margin: 0 1rem 1rem 0;
     text-decoration: none;
     color: inherit;
-    font: inherit; /* mantém o tamanho original */
+    font: inherit;
     transition: color 0.2s ease-in-out;
 }
 
@@ -522,7 +615,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     cursor: pointer;
 }
 
-/* animação de linhas com gradiente oposto */
 .footer-refs > a::before,
 .footer-refs > a::after {
     content: '';
@@ -536,13 +628,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 
 .footer-refs > a::before {
     top: 0;
-    transform-origin: right; /* linha de cima cresce para a direita */
+    transform-origin: right;
     background: linear-gradient(to right, var(--primary-color), var(--secundary-color));
 }
 
 .footer-refs > a::after {
     bottom: 0;
-    transform-origin: left; /* linha de baixo cresce para a esquerda */
+    transform-origin: left;
     background: linear-gradient(to left, var(--primary-color), var(--secundary-color));
 }
 
