@@ -488,15 +488,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     margin-top: 8rem;
     margin-right: 5rem;
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    height: fit-content;
-    gap: 10px;
+    height: 30px;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+    justify-items: center;
 }
 
 .skills-grid div {
-    border: 1px solid #c678dd;
-    padding: 8px 16px;
-    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    padding: 10px 18px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    width: 10rem;
+}
+
+.skills-grid div i {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.skills-grid div:hover {
+    border-color: var(--secundary-color);
+    color: var(--secundary-color);
+    transform: scale(1.05);
 }
 
 /* Section: Sobre mim */

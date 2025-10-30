@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hero_saudacao: "Olá, eu sou",
       hero_subtitulo: "Onde a tecnologia encontra a criatividade",
       hero_btn: "Contate-Me",
-      hero_trabalhando: "Trabalhando em",
+      hero_trabalhando: "Trabalhando em:",
       nav_inicio: "início",
       nav_skills: "habilidades",
       nav_sobre: "sobre mim",
@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
       footer_contato: "contato"
     },
     en: {
-      hero_saudacao: "Hi, I am",
+      hero_saudacao: "Hi, I am a",
       hero_subtitulo: "Where technology meets creativity",
       hero_btn: "Contact Me",
-      hero_trabalhando: "Currently working on",
+      hero_trabalhando: "Currently working on:",
       nav_inicio: "home",
       nav_skills: "skills",
       nav_sobre: "about me",
