@@ -1,62 +1,76 @@
-.skills-section {
-  margin-top: 15rem;
-  color: var(--gray);
+:root {
+    --primary-color: #C778DD;
+    --secundary-color: #9263e9;
+    --gray: #ABB2BF;
+    --background-color: #282C33;
 }
 
-.skills-title {
+/* Section: Habilidades */
+.habilidades {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 10rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 600px;
+  justify-content: center;
 }
 
-.skills-title div:first-child {
-  color: white;
+.skills-page {
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-bottom: 3rem;
+  width: 30%;
+  max-width: 600px;
+  
+}
+
+.skills-top {
+  font-size: 20px;
+}
+
+.skills-bottom {
+  margin-top: 10px;
+  color: var(--gray)
+}
+
+.skills-meaning {
+  text-align: end;
+  margin-left: 10rem;
+}
+
+.meaning-top {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  font-weight: 600;
+}
+
+.meaning-bottom {
+  color: var(--gray);
+  max-width: 600px;
+}
+
+.meaning-bottom > div > span{
+  color: var(--secundary-color);
+  font-weight: 600;
+}
+
+/* Section: Projetos */
+
+.title-1 {
+  margin-top: 3rem;
   font-size: 1.5rem;
 }
 
-.skills-title .line {
-  width: 7rem;
-  height: 1px;
-  background-color: var(--primary-color);
+.projetos-img-container{
+  text-align: center;
 }
 
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+#a9KKSDmanutenção{
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
-.skill {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.skill-header {
-  display: flex;
-  justify-content: left;
-  font-size: 1rem;
-  color: white;
-}
-
-.skill-bar {
-  width: 60%;
-  height: 10px;
-  background-color: #3a3f47;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.skill-fill {
-  height: 100%;
-  background-color: var(--primary-color);
-  border-radius: 10px;
-  width: 0%;
-  animation: grow-bar 1.5s ease-in-out forwards;
-}
-
-@keyframes grow-bar {
-  from { width: 0%; }
-  to { width: var(--final-width); }
-}

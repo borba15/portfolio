@@ -10,7 +10,6 @@
 .hero-text, #nav-left, .skills-title, .about-title, .contact-title {border-left: 1px solid red;}
 #contato {border-right: 1px solid red;}  */
 
-
 html, body {
   overflow-x: hidden;
 }
@@ -139,102 +138,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     color: inherit;
     text-decoration: inherit;
 }
-
-/* Section: Random Shapes */
-
-.ws > img{
-    width: 100px;
-    height: 100px;
-}
-
-.square {
-    border:0.5px solid var(--gray);
-}
-
-.dots {
-    display: grid;
-    grid-template-columns: repeat(5, 15px);
-    grid-template-rows: repeat(5, 15px);
-    gap: 1px; 
-}
-
-.dot {
-    width: 4px;
-    height: 4px;
-    background-color: #b0b6c3;
-    border-radius: 50%;
-}
-
-/* Section 0: dots */
-
-.d1 {
-    position: absolute;
-    top: 460px;
-    left: -31px;
-}
-
-.d2 {
-    position: absolute;
-    top: 1200px;
-    right: -43px;
-}
-
-.d3 {
-    position: absolute;
-    top: 1850px;
-    left: -31px;
-}
-
-.d4 {
-    /* hero dots */
-    position: relative;
-    top: 70px;
-    left: 680px;
-    z-index: 5;
-}
-
-
-/* Section: squares */
-
-.s1 {
-    position: absolute;
-    padding: 45px;
-    top: 200px;
-    right: -1px;
-}
-
-.s2 {
-    position: absolute;
-    padding:80px;
-    top: 1150px;
-    left: -1px
-}
-
-.s3 {
-    position: absolute;
-    padding: 60px;
-    top: 1750px;
-    right: -1px;
-}
-
-.s4 {
-    /* hero square */
-    position: relative;
-    padding: 40px;
-    top: -100px;
-    left: 620px;
-    z-index: 5;
-}
-
-/* Section: weird-shapes */
-
-.ws1 {
-    /* hero weird shape */
-    position: relative;
-    top: -60px;
-    left: 720px;
-}
-
 /* Section: Navbar */
 .navbar {
     display: flex;
@@ -386,12 +289,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     margin-top: 10rem;
 }
 
-
-.hero-text {
-    margin-left: -261px;
-    margin-right: 6rem;
-}
-
 .hero-text > h1 {
     font-size: 35px;
 }
@@ -471,6 +368,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     height: 1px;
     background-color: #C778DD;
     opacity: 0.5;
+    margin: 0;
 }
 
 .skills-shapes {

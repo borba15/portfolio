@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       skills_titulo: "habilidades",
       sobre_titulo: "sobre mim",
       sobre_1:
-        "Atualmente, estou no segundo semestre da graduação e sigo firme no caminho para me tornar um desenvolvedor back-end.",
+        "Atualmente, estou no segundo semestre da graduação e sigo firme no caminho para me tornar um desenvolvedor full-stack.",
       sobre_2:
         "Além da faculdade, gosto de aprofundar meus conhecimentos por conta própria — faço cursos na Udemy e estou sempre explorando novas tecnologias. Também participo de projetos com amigos, o que tem sido uma ótima forma de aprender na prática e trocar experiências sobre programação.",
       sobre_3:
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Se você tem qualquer pergunta ou dúvida, não hesite em me perguntar.",
       contato_box: "Entre em contato",
       footer_inicio: "início",
-      footer_skills: "skills",
+      footer_skills: "habilidades",
       footer_sobre: "sobre mim",
       footer_contato: "contato"
     },
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       skills_titulo: "skills",
       sobre_titulo: "about me",
       sobre_1:
-        "I am currently in the second semester of my degree and working towards becoming a back-end developer.",
+        "I am currently in the second semester of my degree and working towards becoming a full-stack developer.",
       sobre_2:
         "Besides college, I enjoy deepening my knowledge on my own — I take courses on Udemy and am always exploring new technologies. I also participate in projects with friends, which has been a great way to learn hands-on and share programming experiences.",
       sobre_3:
@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function changeLanguage(lang) {
     const t = translations[lang];
 
-    // Hero
     const heroTitle = document.querySelector(".hero-text h1");
     if (heroTitle) heroTitle.childNodes[0].textContent = t.hero_saudacao + " ";
     const heroSubtitle = document.querySelector(".hero-text p");
@@ -76,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroStatus = document.querySelector(".status-text-l");
     if (heroStatus) heroStatus.textContent = t.hero_trabalhando;
 
-    // Navbar
     const navLinks = document.querySelectorAll("#nav-right a");
     if (navLinks.length >= 4) {
       navLinks[0].innerHTML = `<span class="hashtag">#</span>${t.nav_inicio}`;
@@ -85,11 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks[3].innerHTML = `<span class="hashtag">#</span>${t.nav_contato}`;
     }
 
-    // Skills
     const skillsTitle = document.querySelector(".skills-title div")
     if (skillsTitle) skillsTitle.textContent = t.skills_titulo;
 
-    // Footer
     const footerLinks = document.querySelectorAll(".footer-refs a");
     if (footerLinks.length >= 4) {
       footerLinks[0].innerHTML = `<span class="hashtag">#</span>${t.footer_inicio}`;
@@ -98,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
       footerLinks[3].innerHTML = `<span class="hashtag">#</span>${t.footer_contato}`;
     }
 
-    // Sobre
     const aboutTitle = document.querySelector(".about-title div");
     if (aboutTitle) aboutTitle.textContent = t.sobre_titulo;
     const aboutParagraphs = document.querySelectorAll(".about-text p");
@@ -111,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const sobreBtn = document.querySelector(".about-text .btn-outline-light");
     if (sobreBtn) sobreBtn.textContent = t.sobre_btn;
 
-    // Contato
     const contactTitle = document.querySelector(".contact-title div");
     if (contactTitle) contactTitle.textContent = t.contato_titulo;
     const contactParagraphs = document.querySelectorAll(".contact-text p");
@@ -121,16 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactTop = document.querySelector(".contact-box .contact-top");
     if (contactTop) contactTop.textContent = t.contato_box;
 
-    // Atualiza botão do dropdown
     if (button) {
       button.textContent = lang === "pt" ? "Português ▾" : "English ▾";
     }
 
-    // Salva a língua
     localStorage.setItem("lang", lang);
   }
 
-  // Dropdown behavior
   button.addEventListener("click", (e) => {
     e.stopPropagation();
     dropdown.classList.toggle("active");
@@ -150,7 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Carrega idioma salvo
   const savedLang = localStorage.getItem("lang") || "pt";
   changeLanguage(savedLang);
 });
