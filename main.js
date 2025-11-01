@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pt: {
       hero_saudacao: "Olá, eu sou",
       hero_subtitulo: "Onde a tecnologia encontra a criatividade",
-      hero_btn: "Contate-Me",
+      hero_btn: "Currículo",
       hero_trabalhando: "Trabalhando em:",
       nav_inicio: "início",
       nav_skills: "habilidades",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     en: {
       hero_saudacao: "Hi, I am a",
       hero_subtitulo: "Where technology meets creativity",
-      hero_btn: "Contact Me",
+      hero_btn: "Download CV",
       hero_trabalhando: "Currently working on:",
       nav_inicio: "home",
       nav_skills: "skills",
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroSubtitle = document.querySelector(".hero-text p");
     if (heroSubtitle) heroSubtitle.textContent = t.hero_subtitulo;
     const heroBtn = document.querySelector(".btn-outline-light");
-    if (heroBtn) heroBtn.textContent = t.hero_btn;
+    if (heroBtn) heroBtn.innerHTML = `<i class="fa-solid fa-download"></i> ${t.hero_btn}`;
     const heroStatus = document.querySelector(".status-text-l");
     if (heroStatus) heroStatus.textContent = t.hero_trabalhando;
 

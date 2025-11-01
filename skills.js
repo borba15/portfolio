@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".custom-dropdown");
-  const button = dropdown.querySelector(".selected");
-  const options = dropdown.querySelectorAll(".options li");
+  const button = dropdown ? dropdown.querySelector(".selected") : null;
+  const options = dropdown ? dropdown.querySelectorAll(".options li") : [];
 
   const translations = {
     pt: {
@@ -12,11 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
       styles: "Estilos",
       styles_desc: "CSS / Bootstrap",
       back: "Back-End",
-      back_desc: "Node.JS",
+      back_desc: "Node.JS / Python",
+      softwares: "Softwares",
+      softwares_desc: "Pacote Office / Google Workspace / Figma / Inteligência Artificial",
       meaning_title: "O que isso significa?",
       meaning_text:
         'Todas estas linguagens que eu trabalho conseguem criar de maneira atrativa, sites, aplicativos e <br><span>Experiências reais e que resolvem problemas!</span>',
-      not_found: "#404 not found",
+      not_found: "404 not found",
+      footer_inicio: "início",
+      footer_skills: "habilidades",
+      footer_sobre: "sobre mim",
+      footer_contato: "contato"
     },
     en: {
       skills_titulo: "skills",
@@ -26,64 +32,75 @@ document.addEventListener("DOMContentLoaded", () => {
       styles: "Styles",
       styles_desc: "CSS / Bootstrap",
       back: "Back-End",
-      back_desc: "Node.JS",
+      back_desc: "Node.JS / Python",
+      softwares: "Softwares",
+      softwares_desc: "Office Package / Google Workspace / Figma / Artificial Intelligence",
       meaning_title: "What does that mean?",
       meaning_text:
         'All these languages I work with can create attractive websites, apps and <br><span>Real experiences that solve problems!</span>',
-      not_found: "#404 not found",
-    },
+      not_found: "404 not found",
+      footer_inicio: "home",
+      footer_skills: "skills",
+      footer_sobre: "about me",
+      footer_contato: "contact"
+    }
   };
 
   function changeLanguage(lang) {
-    const t = translations[lang];
+    const t = translations[lang] || translations.pt;
 
-    const skillsTitle = document.querySelectorAll(".skills-title div")[0];
+    const skillsTitle = document.querySelector("#skills_titulo");
     if (skillsTitle) skillsTitle.textContent = t.skills_titulo;
 
-    const projetosTitle = document.querySelectorAll(".skills-title div")[1];
-    if (projetosTitle) projetosTitle.textContent = t.projetos_titulo;
-
-    const skillSections = document.querySelectorAll(".skills-page");
-    if (skillSections.length >= 3) {
-      skillSections[0].querySelector(".skills-top span").textContent = t.front;
-      skillSections[0].querySelector(".skills-bottom span").textContent = t.front_desc;
-
-      skillSections[1].querySelector(".skills-top span").textContent = t.styles;
-      skillSections[1].querySelector(".skills-bottom span").textContent = t.styles_desc;
-
-      skillSections[2].querySelector(".skills-top span").textContent = t.back;
-      skillSections[2].querySelector(".skills-bottom span").textContent = t.back_desc;
+    const skillPages = document.querySelectorAll(".skills-page");
+    if (skillPages.length >= 4) {
+      skillPages[0].querySelector(".skills-top").textContent = t.front;
+      skillPages[0].querySelector(".skills-bottom").textContent = t.front_desc;
+      skillPages[1].querySelector(".skills-top").textContent = t.styles;
+      skillPages[1].querySelector(".skills-bottom").textContent = t.styles_desc;
+      skillPages[2].querySelector(".skills-top").textContent = t.back;
+      skillPages[2].querySelector(".skills-bottom").textContent = t.back_desc;
+      skillPages[3].querySelector(".skills-top").textContent = t.softwares;
+      skillPages[3].querySelector(".skills-bottom").textContent = t.softwares_desc;
     }
 
-    const meaningTitle = document.querySelector(".meaning-top div");
-    if (meaningTitle) meaningTitle.textContent = t.meaning_title;
+    const meaningTitle = document.querySelector("#meaning_title");
+    if (meaningTitle) meaningTitle.innerHTML = t.meaning_title;
 
-    const meaningText = document.querySelector(".meaning-bottom div");
+    const meaningText = document.querySelector("#meaning_text");
     if (meaningText) meaningText.innerHTML = t.meaning_text;
 
-    const notFound = document.querySelector("#a9KKSDmanutenção");
+    const notFound = document.getElementById("a9KKSDmanutenção");
     if (notFound) notFound.innerHTML = `<span class="hashtag">#</span>${t.not_found}`;
 
-    button.textContent = lang === "pt" ? "Português ▾" : "English ▾";
+    const footerLinks = document.querySelectorAll(".footer-refs a");
+    if (footerLinks.length >= 4) {
+      footerLinks[0].innerHTML = `<span class="hashtag">#</span>${t.footer_inicio}`;
+      footerLinks[1].innerHTML = `<span class="hashtag">#</span>${t.footer_skills}`;
+      footerLinks[2].innerHTML = `<span class="hashtag">#</span>${t.footer_sobre}`;
+      footerLinks[3].innerHTML = `<span class="hashtag">#</span>${t.footer_contato}`;
+    }
+
+    if (button) button.textContent = lang === "pt" ? "Português ▾" : "English ▾";
 
     localStorage.setItem("lang", lang);
   }
 
-  button.addEventListener("click", (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle("active");
-  });
+  if (button && dropdown) {
+    button.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle("active");
+    });
+  }
 
   document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove("active");
-    }
+    if (dropdown && !dropdown.contains(e.target)) dropdown.classList.remove("active");
   });
 
   options.forEach((option) => {
     option.addEventListener("click", () => {
       const selectedLang = option.dataset.lang;
-      dropdown.classList.remove("active");
+      if (dropdown) dropdown.classList.remove("active");
       changeLanguage(selectedLang);
     });
   });

@@ -1,6 +1,6 @@
 :root {
     --primary-color: #C778DD;
-    --secundary-color: #9263e9;
+    --secundary-color: #B64FD3;
     --gray: #ABB2BF;
     --background-color: #282C33;
 }
@@ -144,6 +144,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     justify-content: space-between;
     align-items: center;
     margin-top: 2.5rem;
+}
+
+.navbar h1 {
+    line-height: 1;
+    margin: 0;
 }
 
 .language-switcher {
@@ -414,6 +419,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     border-color: var(--secundary-color);
     color: var(--secundary-color);
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3)
 }
 
 /* Section: Sobre mim */
