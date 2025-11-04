@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const translations = {
     pt: {
       skills_titulo: "habilidades",
+      nav_inicio: "início",
+      nav_skills: "habilidades",
+      nav_sobre: "sobre mim",
+      nav_contato: "contato",
       projetos_titulo: "projetos",
       front: "Front-End",
       front_desc: "HTML / JavaScript / React",
@@ -17,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       softwares_desc: "Pacote Office / Google Workspace / Figma / Inteligência Artificial",
       meaning_title: "O que isso significa?",
       meaning_text:
-        'Todas estas linguagens que eu trabalho conseguem criar de maneira atrativa, sites, aplicativos e <br><span>Experiências reais e que resolvem problemas!</span>',
+        'Com essas tecnologias, é feita a criação de maneira atrativa e funcional, de aplicações e <span>Experiências reais, que resolvem problemas.</span>',
       not_found: "404 not found",
       footer_inicio: "início",
       footer_skills: "habilidades",
@@ -27,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     en: {
       skills_titulo: "skills",
       projetos_titulo: "projects",
+      nav_inicio: "home",
+      nav_skills: "skills",
+      nav_sobre: "about me",
+      nav_contato: "contact",
       front: "Front-End",
       front_desc: "HTML / JavaScript / React",
       styles: "Styles",
@@ -37,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       softwares_desc: "Office Package / Google Workspace / Figma / Artificial Intelligence",
       meaning_title: "What does that mean?",
       meaning_text:
-        'All these languages I work with can create attractive websites, apps and <br><span>Real experiences that solve problems!</span>',
+        'Using these technologies, I build attractive, functional applications and <br><span>Real experiences that solves problems.</span>',
       not_found: "404 not found",
       footer_inicio: "home",
       footer_skills: "skills",
@@ -62,6 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
       skillPages[2].querySelector(".skills-bottom").textContent = t.back_desc;
       skillPages[3].querySelector(".skills-top").textContent = t.softwares;
       skillPages[3].querySelector(".skills-bottom").textContent = t.softwares_desc;
+    }
+
+    const navLinks = document.querySelectorAll("#nav-right a");
+    if (navLinks.length >= 4) {
+      navLinks[0].innerHTML = `<span class="hashtag">#</span>${t.nav_inicio}`;
+      navLinks[1].innerHTML = `<span class="hashtag">#</span>${t.nav_skills}`;
+      navLinks[2].innerHTML = `<span class="hashtag">#</span>${t.nav_sobre}`;
+      navLinks[3].innerHTML = `<span class="hashtag">#</span>${t.nav_contato}`;
     }
 
     const meaningTitle = document.querySelector("#meaning_title");
@@ -107,4 +123,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const savedLang = localStorage.getItem("lang") || "pt";
   changeLanguage(savedLang);
+});
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
 });
