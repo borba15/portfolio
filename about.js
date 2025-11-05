@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       behindParagraphs[3].textContent = t.atras_4;
     }
 
-    if (button) button.textContent = lang === "pt" ? "Português ▾" : "English ▾";
+    button.textContent = lang === "pt" ? "PT ▾" : "ENG ▾";
 
     localStorage.setItem("lang", lang);
   }

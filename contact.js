@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (formButton) formButton.textContent = t.form_button;
 
-    if (button) button.textContent = lang === "pt" ? "Português ▾" : "English ▾";
+    if (button) button.textContent = lang === "pt" ? "PT ▾" : "ENG ▾";
 
     localStorage.setItem("lang", lang);
   }

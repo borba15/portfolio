@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
     <link rel="stylesheet" href="./contact.css">
 
 </head>
@@ -49,7 +50,7 @@
             </div>
 
             <div class="mobile-menu" id="mobile-menu">
-                <a href="./inicio"><span class="hashtag">#</span>início</a>
+                <a href="./index.html"><span class="hashtag">#</span>início</a>
                 <a href="./skills.html"><span class="hashtag">#</span>habilidades</a>
                 <a href="./about.html"><span class="hashtag">#</span>sobre mim</a>
                 <a href="./contact.html"><span class="hashtag">#</span>contato</a>
@@ -62,10 +63,10 @@
                     <a href="./contact.html" class="hover-underline"><span class="hashtag">#</span>contato</a>
                 <div class="language-switcher">
                     <div class="custom-dropdown">
-                    <button class="selected">Português ▾</button>
+                    <button class="selected">PT ▾</button>
                     <ul class="options">
-                        <li data-lang="pt">Português</li>
-                        <li data-lang="en">English</li>
+                        <li data-lang="pt"><span class="fi fi-br"></span> PT</li>
+                        <li data-lang="en"><span class="fi fi-us"></span> ENG</li>
                     </ul>
                     </div>
                 </div>
@@ -74,14 +75,14 @@
 
         <section class="contact-top-2">
             <div>
-                <p>Olá.</p>
-                <p>Então vamos trabalhar juntos?</p>
+                <p class="reveal reveal-scale">Olá.</p>
+                <p class="reveal reveal-scale">Então vamos trabalhar juntos?</p>
             </div>
         </section>
 
         <section class="contact-bottom-2">
-            <div class="left-text">
-            <div class="email-box">
+            <div class="left-text reveal reveal-left">
+            <div class="email-box ">
                 <i class="fa-solid fa-envelope"></i>
                 <div>
                 <h3>Para comissões e projetos:</h3>
@@ -91,7 +92,7 @@
             </div>
             </div>
 
-            <div class="submit">
+            <div class="submit reveal reveal-scale">
             <form action="https://formspree.io/f/mldoywbo" method="POST">
                 <label for="name">Nome</label>
                 <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
@@ -123,4 +124,5 @@
     </section>
 </body>
 <script src="./contact.js"></script>
+<script src="./animation.js"></script>
 </html>

@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (contactTop) contactTop.textContent = t.contato_box;
 
     if (button) {
-      button.textContent = lang === "pt" ? "Português ▾" : "English ▾";
+      button.textContent = lang === "pt" ? "PT ▾" : "ENG ▾";
     }
 
     localStorage.setItem("lang", lang);

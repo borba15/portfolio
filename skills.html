@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
     <link rel="stylesheet" href="./skills.css">
 </head>
 <body>
@@ -46,16 +47,16 @@
             </div>
 
             <div id="nav-right">
-                    <a href="./inicio" class="hover-underline"><span class="hashtag">#</span>início</a>
+                    <a href="./index.html" class="hover-underline"><span class="hashtag">#</span>início</a>
                     <a href="./skills.html" class="hover-underline"><span class="hashtag">#</span>habilidades</a>
                     <a href="./about.html" class="hover-underline"><span class="hashtag">#</span>sobre mim</a>
                     <a href="./contact.html" class="hover-underline"><span class="hashtag">#</span>contato</a>
                 <div class="language-switcher">
                     <div class="custom-dropdown">
-                    <button class="selected">Português ▾</button>
+                    <button class="selected">PT ▾</button>
                     <ul class="options">
-                        <li data-lang="pt">Português</li>
-                        <li data-lang="en">English</li>
+                        <li data-lang="pt"><span class="fi fi-br"></span> PT</li>
+                        <li data-lang="en"><span class="fi fi-us"></span> ENG</li>
                     </ul>
                     </div>
                 </div>
@@ -63,13 +64,13 @@
         </nav>
 
     <section class="habilidades">
-        <div class="skills-title">
+        <div class="skills-title reveal reveal-left">
             <span class="hashtag">#</span>
             <div id="skills_titulo">habilidades</div>
             <span id="line-skills"></span>
         </div>
 
-        <div class="habilidades-left">
+        <div class="habilidades-left reveal reveal-scale">
             <div class="skills-page">
                 <div class="skills-top" id="front">Front-End</div>
                 <div class="skills-bottom" id="front_desc">HTML / JavaScript / React</div>
@@ -92,7 +93,7 @@
             
         </div>
 
-        <div class="skills-meaning">
+        <div class="skills-meaning reveal reveal-right">
             <div class="meaning-top"><span class="hashtag">#</span><span id="meaning_title">O que isso significa?</span></div>
             <div class="meaning-bottom" id="meaning_text">
                 Com essas tecnologias, é feita a criação de maneira atrativa e funcional, de aplicações e <span>Experiências reais, que resolvem problemas.</span>
@@ -101,13 +102,13 @@
     </section>
 
     <section>
-        <div class="skills-title" style="margin-top: 5rem;">
+        <div class="skills-title reveal reveal-left" style="margin-top: 5rem;">
             <span class="hashtag">#</span>
             <div id="projetos_titulo">projetos</div>
             <span id="line-skills"></span>
         </div>
 
-        <div id="a9KKSDmanutenção"><span class="hashtag">#</span>404 not found</div>
+        <div id="a9KKSDmanutenção" class="reveal reveal-scale"><span class="hashtag">#</span>404 not found</div>
     </section>
 
 </div>
@@ -124,6 +125,8 @@
             © Leonardo de Menezes Borba
         </div>
     </section>
-<script src="./skills.js"></script>
+
 </body>
+<script src="./skills.js"></script>
+<script src="./animation.js"></script>
 </html>

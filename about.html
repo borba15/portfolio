@@ -20,7 +20,7 @@
           integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
           crossorigin="anonymous" 
           referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
     <link rel="stylesheet" href="./about.css">
 </head>
 <body>
@@ -72,16 +72,16 @@
             </div>
 
             <div id="nav-right">
-                    <a href="./inicio" class="hover-underline"><span class="hashtag">#</span>início</a>
+                    <a href="./index.html" class="hover-underline"><span class="hashtag">#</span>início</a>
                     <a href="./skills.html" class="hover-underline"><span class="hashtag">#</span>habilidades</a>
                     <a href="./about.html" class="hover-underline"><span class="hashtag">#</span>sobre mim</a>
                     <a href="./contact.html" class="hover-underline"><span class="hashtag">#</span>contato</a>
                 <div class="language-switcher">
                     <div class="custom-dropdown">
-                    <button class="selected">Português ▾</button>
+                    <button class="selected">PT ▾</button>
                     <ul class="options">
-                        <li data-lang="pt">Português</li>
-                        <li data-lang="en">English</li>
+                        <li data-lang="pt"><span class="fi fi-br"></span> PT</li>
+                        <li data-lang="en"><span class="fi fi-us"></span> ENG</li>
                     </ul>
                     </div>
                 </div>
@@ -91,13 +91,13 @@
         <!-- Section: introduction -->
         <section class="introduction">
             <div class="about-content">
-                <div class="about-title">
+                <div class="about-title reveal reveal-left">
                     <span class="hashtag">#</span>
                     <div id="about-title">introdução</div>
                     <span id="line-about"></span>
                 </div>
 
-                <div class="about-paragraphs">
+                <div class="about-paragraphs reveal reveal-left">
                     <p>
                         Olá! Eu sou o Leonardo de Menezes Borba, estudante de Sistemas de Informação na UNIFAFIBE, atualmente no segundo semestre da graduação. Desde cedo, descobri uma grande paixão por tecnologia e por entender como as coisas funcionam. Hoje, sigo determinado a me tornar um desenvolvedor full-stack, unindo lógica, design e criatividade para construir experiências digitais.
                     </p>
@@ -112,20 +112,19 @@
                 </div>
             </div>
 
-            <div class="about-visual">
+            <div class="about-visual reveal reveal-scale">
                 <img src="./images/floating.jpg" alt="Developer Illustration">
             </div>
         </section>
 
         <!-- Section: atrás da tela -->
-        <section class="atras-da-tela">
+        <section class="atras-da-tela reveal reveal-scale">
             <div class="about-title">
                 <span class="hashtag">#</span>
                 <div>atrás da tela</div>
-                <span id="line-about"></span>
             </div>
 
-            <div class="about-paragraphs">
+            <div class="about-paragraphs reveal reveal-scale">
                 <p>
                     Fora do computador, sou alguém que gosta de jogar videogame, ouvir MPB, lofi e rock clássico, e tenho uma grande admiração por ciência e astronomia. Também sou fã de filmes como De Volta para o Futuro e Interestellar, que reforçam minha curiosidade sobre o tempo, o espaço e as possibilidades infinitas do conhecimento.
                 </p>
@@ -159,4 +158,5 @@
     </section>
 </body>
 <script src="./about.js"></script>
+<script src="./animation.js"></script>
 </html>

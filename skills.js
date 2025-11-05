@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       footerLinks[3].innerHTML = `<span class="hashtag">#</span>${t.footer_contato}`;
     }
 
-    if (button) button.textContent = lang === "pt" ? "Português ▾" : "English ▾";
+    if (button) button.textContent = lang === "pt" ? "PT ▾" : "ENG ▾";
 
     localStorage.setItem("lang", lang);
   }
