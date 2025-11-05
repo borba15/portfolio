@@ -800,6 +800,69 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     .contact-top {
         font-weight: 600;
     }
+
+    .introduction {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 6rem;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  .about-content {
+    order: 1;
+  }
+
+  .about-visual {
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .about-visual img {
+    width: 220px;
+  }
+
+  .about-visual::before {
+    width: 225px;
+    height: 225px;
+  }
+
+  .about-visual::after {
+    width: 210px;
+    height: 210px;
+  }
+
+  .about-title {
+    justify-content: center;
+    text-align: center;
+  }
+
+  #line-about {
+    display: none;
+  }
+
+  .about-paragraphs p {
+    max-width: 100%;
+    font-size: 0.85rem;
+    line-height: 1.9;
+  }
+
+  .atras-da-tela {
+    margin-top: 6rem;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .atras-da-tela .about-title {
+    justify-content: center;
+  }
+
+  .atras-da-tela .about-paragraphs p {
+    font-size: 0.85rem;
+    line-height: 1.9;
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
