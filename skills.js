@@ -64,44 +64,44 @@ document.addEventListener("DOMContentLoaded", () => {
     pt: {
       front: {
         title: "O que é Front-End?",
-        text: "Front-End envolve criar interfaces visuais e interativas usando HTML, CSS e JavaScript.",
+        text: "Front-End envolve criar interfaces visuais e interativas, a estrutura visual do site.",
         cta: "Transformando ideias em experiências digitais reais."
       },
       styles: {
         title: "O que são Estilos?",
-        text: "Estilos definem aparência, cores, espaçamentos e responsividade usando CSS.",
+        text: "Estilos definem aparência, cores, espaçamentos e a responsividade.",
         cta: "Onde cada detalhe visual faz diferença."
       },
       back: {
         title: "O que é Back-End?",
-        text: "Back-End lida com lógica, servidores, bancos de dados e APIs.",
+        text: 'Back-End lida com lógica, servidores, bancos de dados, toda a parte "por trás das câmeras"',
         cta: "A lógica invisível que faz tudo acontecer."
       },
       softwares: {
         title: "O que são Softwares?",
-        text: "Softwares como Figma e Office auxiliam no design, produtividade e organização.",
+        text: "Softwares são os programas que orientam o usuário realizar tarefas, servindo para facilitar e automatizar diversas atividades.",
         cta: "Ferramentas que potencializam resultados."
       }
     },
     en: {
       front: {
         title: "What is Front-End?",
-        text: "Front-End creates visual and interactive interfaces using HTML, CSS and JavaScript.",
+        text: "Front-End involves creating visual and interactive interfaces, the visual structure of the website.",
         cta: "Turning ideas into real digital experiences."
       },
       styles: {
         title: "What are Styles?",
-        text: "Styles define colors, spacing, responsiveness and structure using CSS.",
+        text: "Styles define appearance, colors, spacing, and responsiveness.",
         cta: "Where every visual detail matters."
       },
       back: {
         title: "What is Back-End?",
-        text: "Back-End handles logic, servers, databases and APIs.",
+        text: 'Back-End deals with logic, servers, databases, and all the "behind-the-scenes" parts.',
         cta: "The invisible logic making everything possible."
       },
       softwares: {
         title: "What are Softwares?",
-        text: "Softwares like Figma and Office support design, productivity and organization.",
+        text: "Software programs guide the user in performing tasks, helping to simplify and automate various activities.",
         cta: "Tools that boost productivity and results."
       }
     }
@@ -249,3 +249,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Inicializa idioma
   changeLanguage(localStorage.getItem("lang") || "pt");
 });
+
