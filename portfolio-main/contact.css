@@ -1,0 +1,134 @@
+.contact-top-2 {
+    background: url('./assets/contact-bg.svg') no-repeat center center/cover;
+    min-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: "Fira Code", monospace;
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.contact-top-2 p {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 0.3rem 0;
+    font-weight: 600;
+}
+
+.contact-bottom-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem 2rem 6rem 2rem;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.left-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.left-text .email-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.left-text i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.left-text h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.left-text p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.left-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.left-text a:hover {
+    color: var(--secundary-color);
+    text-decoration: underline;
+}
+
+.submit {
+    flex: 1;
+    min-width: 340px;
+    max-width: 480px;
+}
+
+.submit form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 18px rgba(199, 120, 221, 0.15);
+}
+
+form label {
+    font-size: 0.85rem;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+form input,
+form textarea {
+    background: none;
+    border: 1px solid var(--gray);
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: #fff;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 6px rgba(199, 120, 221, 0.4);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+form button:hover {
+    background: var(--primary-color);
+    border-color: var(--secundary-color);
+    color: #fff;
+    transform: scale(1.02);
+}
