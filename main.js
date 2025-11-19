@@ -120,12 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (aboutTitle) aboutTitle.textContent = t.sobre_titulo;
 
     const aboutParagraphs = qa(".about-text p");
-    if (aboutParagraphs.length >= 3) {
-      if (aboutParagraphs.length >= 3) {
-        aboutParagraphs[0].textContent = t.sobre_1;
-        aboutParagraphs[1].textContent = t.sobre_2;
-        aboutParagraphs[2].textContent = t.sobre_3;
-        }
+    if (aboutParagraphs.length >= 4) {
+        aboutParagraphs[0].textContent = t.sobre_0;
+        aboutParagraphs[1].textContent = t.sobre_1;
+        aboutParagraphs[2].textContent = t.sobre_2;
+        aboutParagraphs[3].textContent = t.sobre_3;
     }
 
     const sobreBtn = q(".about-text .btn-outline-light");
@@ -195,4 +194,5 @@ if (mobileLangBtn && mobileLangOptions) {
   });
 
   changeLanguage(localStorage.getItem("lang") || "pt");
+
 });
