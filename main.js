@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       skills_titulo: "habilidades",
       sobre_titulo: "sobre mim",
       sobre_1:
-        "Atualmente, estou no segundo semestre da graduação e sigo firme no caminho para me tornar um desenvolvedor full-stack.",
+        "Atualmente, estou no terceiro semestre da graduação e sigo firme no caminho para me tornar um desenvolvedor full-stack.",
       sobre_2:
         "Além da faculdade, gosto de aprofundar meus conhecimentos por conta própria — faço cursos na Udemy e estou sempre explorando novas tecnologias. Também participo de projetos com amigos, o que tem sido uma ótima forma de aprender na prática e trocar experiências sobre programação.",
       sobre_3:
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       skills_titulo: "skills",
       sobre_titulo: "about me",
       sobre_1:
-        "I am currently in the second semester of my degree and working towards becoming a full-stack developer.",
+        "I am currently in the third semester of my degree and working towards becoming a full-stack developer.",
       sobre_2:
         "Besides college, I enjoy deepening my knowledge on my own — I take courses on Udemy and am always exploring new technologies. I also participate in projects with friends, which has been a great way to learn hands-on and share programming experiences.",
       sobre_3:
@@ -196,3 +196,4 @@ if (mobileLangBtn && mobileLangOptions) {
   changeLanguage(localStorage.getItem("lang") || "pt");
 
 });
+
