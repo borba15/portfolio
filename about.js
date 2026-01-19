@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       footer_sobre: "sobre mim",
       footer_contato: "contato",
       sobre_title: "introdução",
-      sobre_1: `Olá! Eu sou o Leonardo de Menezes Borba, estudante de Sistemas de Informação na UNIFAFIBE, atualmente no segundo semestre da graduação. Desde cedo, descobri uma grande paixão por tecnologia e por entender como as coisas funcionam. Hoje, sigo determinado a me tornar um desenvolvedor full-stack, unindo lógica, design e criatividade para construir experiências digitais.`,
+      sobre_1: `Olá! Eu sou o Leonardo de Menezes Borba, estudante de Sistemas de Informação na UNIFAFIBE, atualmente no terceiro semestre da graduação. Desde cedo, descobri uma grande paixão por tecnologia e por entender como as coisas funcionam. Hoje, sigo determinado a me tornar um desenvolvedor full-stack, unindo lógica, design e criatividade para construir experiências digitais.`,
       sobre_2: `No meu dia a dia, gosto de trabalhar com as ferramentas que já uso, mas também estou sempre aberto a explorar novas tecnologias e frameworks. Tenho grande interesse por inteligência artificial, ciência de dados e inovação tecnológica — áreas que me inspiram a pensar em soluções criativas e a aprender continuamente.`,
       sobre_3: `Além da parte técnica, valorizo muito a comunicação clara, a organização e a proatividade. Acredito que um bom desenvolvedor não apenas escreve código, mas entende o propósito do projeto e contribui para torná-lo melhor em todos os aspectos.`,
       atras_title: "atrás da tela",
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       footer_sobre: "about me",
       footer_contato: "contact",
       sobre_title: "introduction",
-      sobre_1: `Hello! I'm Leonardo de Menezes Borba, an Information Systems student at UNIFAFIBE, currently in my second semester. From an early age, I developed a great passion for technology and for understanding how things work. Today, I’m determined to become a full-stack developer, combining logic, design, and creativity to build digital experiences.`,
+      sobre_1: `Hello! I'm Leonardo de Menezes Borba, an Information Systems student at UNIFAFIBE, currently in my third semester. From an early age, I developed a great passion for technology and for understanding how things work. Today, I’m determined to become a full-stack developer, combining logic, design, and creativity to build digital experiences.`,
       sobre_2: `In my daily life, I enjoy working with the tools I already know, but I’m always open to exploring new technologies and frameworks. I’m very interested in artificial intelligence, data science, and technological innovation — areas that inspire me to think creatively and keep learning.`,
       sobre_3: `Beyond the technical side, I highly value clear communication, organization, and proactivity. I believe a good developer not only writes code but also understands the project’s purpose and contributes to improving it in every aspect.`,
       atras_title: "behind the screen",
@@ -153,3 +153,4 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("lang") || "pt";
   changeLanguage(savedLang);
 });
+
