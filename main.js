@@ -74,6 +74,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const q = (sel) => document.querySelector(sel);
     const qa = (sel) => document.querySelectorAll(sel);
 
+    const resumeLink = document.querySelector('.hero-text a');
+
+    if (resumeLink) {
+      if (lang === "pt") {
+        resumeLink.href = "./resume/Leonardo de Menezes Borba - Currículo.pdf";
+        resumeLink.setAttribute("download", "Leonardo de Menezes Borba - Currículo.pdf");
+      } 
+      else {
+        resumeLink.href = "./resume/Leonardo de Menezes Borba - Resume.pdf";
+        resumeLink.setAttribute("download", "Leonardo de Menezes Borba - Resume.pdf");
+      }
+    }
+    
     const heroTitle = q(".hero-text h1");
     if (heroTitle) heroTitle.childNodes[0].textContent = t.hero_saudacao + " ";
 
